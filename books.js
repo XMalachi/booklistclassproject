@@ -1,18 +1,16 @@
 
 
 
-// get all elements required
-// title, author, isbn
-
-
-// add items to table
 
 function addItems(){
+    // get all elements required
+    // title, author, isbn
+
     let title = document.getElementById('title').value
     let author = document.getElementById('author').value
     let isbn = document.getElementById('isbn').value
 
-
+// add items to table
     let table = document.getElementsByClassName('table')[0]
     let tbody = document.getElementsByTagName('tbody')[0]
     let trgroup = document.createElement('tr')
@@ -58,8 +56,6 @@ function removeItem(){
     let removeBtn =  document.getElementById('removeBtn')
 
     removeBtn.parentElement.parentElement.remove()
-
-    // trgroup.innerHTML =  ``;
     
 
 }
@@ -77,6 +73,7 @@ function changeDarkMode(){
     modeToggler.innerHTML = `<button id="modeToggle" onclick="changeLightMode()"><i class="fa-solid fa-toggle-on"></i></i></button>`
 }
 
+// change back to light mode
 function changeLightMode(){
     let modeToggle = document.getElementById('modeToggle')
     let body = document.getElementById('body')
